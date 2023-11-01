@@ -35,15 +35,9 @@ class Solution {
                 if(current.right != null)
                     nodes.add(current.right);
             }
-            if(level <= 1){
+            if(currentMax > maximal){
                 maximal = currentMax;
                 levelOfMaximal = level;
-            }
-            else{
-                if(currentMax > maximal){
-                    maximal = currentMax;
-                    levelOfMaximal = level;
-                }
             }
         }
         return levelOfMaximal;
